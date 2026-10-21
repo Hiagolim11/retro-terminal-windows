@@ -1,5 +1,5 @@
 // Valores padrão, fontes, shells e perfis embutidos.
-// Os perfis seguem os valores dos perfis do cool-retro-term (ver relatório §13),
+// Os perfis seguem os valores dos perfis do cool-retro-term (ver docs/ARQUITETURA.md),
 // com as fontes trocadas por equivalentes disponíveis neste app.
 
 const PROFILE_VERSION = 2;

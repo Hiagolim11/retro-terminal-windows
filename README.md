@@ -206,7 +206,6 @@ Para testar os efeitos sem instalar nada: `npm start -- --profile "Commodore 64"
 |---|---|
 | [docs/GUIA-DE-USO.md](docs/GUIA-DE-USO.md) | Guia do usuário: cada opção das Configurações explicada, perfis, dicas e solução de problemas |
 | [docs/ARQUITETURA.md](docs/ARQUITETURA.md) | Arquitetura, pipeline de renderização, shaders e estrutura do código |
-| [docs/RELATORIO-COOL-RETRO-TERM.md](docs/RELATORIO-COOL-RETRO-TERM.md) | Análise do cool-retro-term original (Linux) que serviu de base para este projeto |
 | [CHANGELOG.md](CHANGELOG.md) | Histórico de versões |
 
 ---
@@ -214,8 +213,7 @@ Para testar os efeitos sem instalar nada: `npm start -- --profile "Commodore 64"
 ## Créditos e licença
 
 - Inspirado no **[cool-retro-term](https://github.com/Swordfish90/cool-retro-term)** de Filippo Scognamiglio.
-  Os efeitos foram reimplementados para WebGL2 a partir da análise documentada em
-  [docs/RELATORIO-COOL-RETRO-TERM.md](docs/RELATORIO-COOL-RETRO-TERM.md).
+  Os efeitos foram reimplementados para WebGL2 a partir de uma análise do app original.
 - [xterm.js](https://xtermjs.org) (MIT), [node-pty](https://github.com/microsoft/node-pty) (MIT), [Electron](https://www.electronjs.org) (MIT).
 - Fontes via [Fontsource](https://fontsource.org), sob a SIL Open Font License: VT323, Press Start 2P, Silkscreen,
   Share Tech Mono, IBM Plex Mono, JetBrains Mono, Fira Code e Space Mono.

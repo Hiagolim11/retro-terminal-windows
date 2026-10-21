@@ -1,6 +1,6 @@
 /* Renderizador CRT em WebGL2.
  *
- * Passes por quadro (ver relatório §10):
+ * Passes por quadro (ver docs/ARQUITETURA.md §6):
  *   1. textura do texto (canvas 2D do terminal em resolução virtual)
  *   2. burn-in: laço de feedback ping-pong  acc = max(acc - decaimento, texto)
  *   3. bloom: redução + desfoque gaussiano separável (H e V)

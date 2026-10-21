@@ -269,8 +269,6 @@ Quando um programa ativa o rastreamento de mouse (`term.modes.mouseTrackingMode`
 | Cores | `/256` (levemente escurecidas) | `/255` |
 | Botão "Remove" | chama `selection.clear()` inexistente | corrigido |
 
-A análise completa do original está em [RELATORIO-COOL-RETRO-TERM.md](RELATORIO-COOL-RETRO-TERM.md).
-
 ## 11. Empacotamento
 
 O `electron-builder` gera dois executáveis (`npm run dist`):

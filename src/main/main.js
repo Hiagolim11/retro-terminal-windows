@@ -10,7 +10,7 @@ const RENDERER = path.join(__dirname, '..', 'renderer');
 const ICON = path.join(RENDERER, 'icon.png');
 
 // ---------------------------------------------------------------------------
-// Linha de comando (mesmas opções do cool-retro-term, relatório §5)
+// Linha de comando (mesmas opções do cool-retro-term)
 // ---------------------------------------------------------------------------
 const HELP = `Uso: HackerTerminalRetro [--default-settings] [--workdir <dir>] [-p|--profile <perfil>] [--fullscreen] [--verbose] [-e <cmd> ...]
   --default-settings  Inicia com as configurações padrão
