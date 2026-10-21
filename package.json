@@ -1,0 +1,55 @@
+{
+  "name": "hacker-terminal-retro",
+  "productName": "Hacker Terminal Retro",
+  "version": "1.0.0",
+  "description": "Emulador de terminal para Windows com efeitos de monitor CRT antigo, inspirado no cool-retro-term.",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "icon": "node scripts/make-icon.js",
+    "dist": "electron-builder --win nsis portable",
+    "dist:portable": "electron-builder --win portable"
+  },
+  "keywords": ["terminal", "crt", "retro", "windows"],
+  "author": "Hiagolim11",
+  "homepage": "https://github.com/Hiagolim11/retro-terminal-windows",
+  "repository": { "type": "git", "url": "https://github.com/Hiagolim11/retro-terminal-windows.git" },
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "node-pty": "^1.1.0"
+  },
+  "devDependencies": {
+    "@xterm/xterm": "^6.0.0",
+    "electron": "^38.8.6",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.hackerterminalretro.app",
+    "productName": "Hacker Terminal Retro",
+    "npmRebuild": false,
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "asarUnpack": [
+      "node_modules/node-pty/**/*"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "icon": "src/renderer/icon.png",
+      "target": ["nsis", "portable"]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "Hacker Terminal Retro",
+      "artifactName": "HackerTerminalRetro-Setup-${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "HackerTerminalRetro-Portable-${version}.${ext}"
+    }
+  }
+}

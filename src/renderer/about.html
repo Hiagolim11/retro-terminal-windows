@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self'">
+  <title>Sobre o Hacker Terminal Retro</title>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="ui.css">
+  <style>
+    body { align-items: center; justify-content: center; text-align: center; padding: 20px 28px; }
+    h1 { font-family: 'VT323', monospace; font-weight: normal; font-size: 44px; margin: 0; color: var(--accent);
+         text-shadow: 0 0 10px rgba(255, 150, 30, 0.8), 0 0 30px rgba(255, 120, 0, 0.4); letter-spacing: 2px; }
+    img { width: 96px; height: 96px; image-rendering: pixelated; margin-bottom: 6px; }
+    .ver { color: var(--muted); margin: 2px 0 14px; }
+    p { margin: 6px 0; font-size: 13px; }
+    a { color: var(--accent); cursor: pointer; }
+    .license { color: var(--muted); font-size: 12px; max-width: 470px; margin-top: 14px; }
+    button { margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <img src="icon.png" alt="">
+  <h1>HACKER TERMINAL RETRO</h1>
+  <div class="ver" id="ver"></div>
+  <p>Emulador de terminal para Windows com efeitos de monitor CRT antigo.</p>
+  <p>ConPTY + xterm.js para a emulação · WebGL2 para os efeitos.</p>
+  <p>Inspirado no <a data-url="https://github.com/Swordfish90/cool-retro-term">cool-retro-term</a>, de Filippo Scognamiglio.</p>
+  <p class="license">Este programa é software livre: você pode redistribuí-lo e/ou modificá-lo sob os termos da
+    GNU General Public License, versão 3 ou posterior. É distribuído SEM NENHUMA GARANTIA.</p>
+  <button id="close">Fechar</button>
+  <script src="about.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:">
+  <title>Hacker Terminal Retro</title>
+  <link rel="stylesheet" href="vendor/xterm.css">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="terminal.css">
+</head>
+<body>
+  <div id="tabbar" hidden>
+    <div id="tabs"></div>
+    <button id="add-tab" title="Nova aba (Ctrl+Shift+T)">+</button>
+  </div>
+  <div id="screen-wrap">
+    <canvas id="screen"></canvas>
+    <div id="size-overlay" hidden></div>
+    <div id="error" hidden></div>
+  </div>
+  <!-- Instâncias do xterm.js ficam invisíveis: cuidam da emulação VT e do teclado. -->
+  <div id="xterm-hosts"></div>
+
+  <div id="help" hidden>
+    <div class="help-box">
+      <h2>Atalhos de teclado</h2>
+      <table>
+        <tr><td>Nova aba / fechar aba</td><td>Ctrl+Shift+T / Ctrl+Shift+W</td></tr>
+        <tr><td>Nova janela</td><td>Ctrl+Shift+N</td></tr>
+        <tr><td>Ir para aba 1…9</td><td>Alt+1 … Alt+9</td></tr>
+        <tr><td>Próxima / anterior aba</td><td>Ctrl+Tab / Ctrl+Shift+Tab</td></tr>
+        <tr><td>Copiar</td><td>Ctrl+Shift+C (ou Ctrl+C com seleção)</td></tr>
+        <tr><td>Colar</td><td>Ctrl+Shift+V / Shift+Insert</td></tr>
+        <tr><td>Selecionar tudo</td><td>Ctrl+Shift+A</td></tr>
+        <tr><td>Zoom + / − / padrão</td><td>Ctrl+= / Ctrl+- / Ctrl+0 (ou Ctrl+roda)</td></tr>
+        <tr><td>Rolar histórico</td><td>Shift+PgUp / Shift+PgDn / roda do mouse</td></tr>
+        <tr><td>Limpar histórico</td><td>Ctrl+Shift+K</td></tr>
+        <tr><td>Tela cheia</td><td>F11</td></tr>
+        <tr><td>Configurações</td><td>Ctrl+,</td></tr>
+        <tr><td>Menu</td><td>botão direito (Shift+botão direito em apps com mouse)</td></tr>
+        <tr><td>Esta ajuda</td><td>F1</td></tr>
+      </table>
+      <p>Clique ou pressione Esc para fechar.</p>
+    </div>
+  </div>
+
+  <script src="vendor/xterm.js"></script>
+  <script src="crt.js"></script>
+  <script src="textgrid.js"></script>
+  <script src="terminal.js"></script>
+</body>
+</html>

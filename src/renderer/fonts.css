@@ -1,0 +1,12 @@
+@font-face { font-family: 'VT323'; src: url('fonts/vt323-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Press Start 2P'; src: url('fonts/press-start-2p-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Silkscreen'; src: url('fonts/silkscreen-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Share Tech Mono'; src: url('fonts/share-tech-mono-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'IBM Plex Mono'; font-weight: 400; src: url('fonts/ibm-plex-mono-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'IBM Plex Mono'; font-weight: 700; src: url('fonts/ibm-plex-mono-latin-700-normal.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-weight: 400; src: url('fonts/jetbrains-mono-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-weight: 700; src: url('fonts/jetbrains-mono-latin-700-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Fira Code'; font-weight: 400; src: url('fonts/fira-code-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Fira Code'; font-weight: 700; src: url('fonts/fira-code-latin-700-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Space Mono'; font-weight: 400; src: url('fonts/space-mono-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Space Mono'; font-weight: 700; src: url('fonts/space-mono-latin-700-normal.woff2') format('woff2'); }

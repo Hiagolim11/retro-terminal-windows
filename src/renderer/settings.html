@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'">
+  <title>Configurações — Hacker Terminal Retro</title>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body>
+  <nav class="tabbar" role="tablist">
+    <button class="tab active" data-page="general">Geral</button>
+    <button class="tab" data-page="terminal">Terminal</button>
+    <button class="tab" data-page="effects">Efeitos</button>
+    <button class="tab" data-page="advanced">Avançado</button>
+  </nav>
+
+  <main>
+    <!-- GERAL -->
+    <section class="page active" id="page-general">
+      <fieldset>
+        <legend>Perfis</legend>
+        <div class="profiles">
+          <select id="profile-list" size="9"></select>
+          <div class="buttons">
+            <button id="btn-load">Carregar</button>
+            <button id="btn-save">Salvar atual…</button>
+            <button id="btn-remove">Remover</button>
+            <span class="spacer"></span>
+            <button id="btn-import">Importar…</button>
+            <button id="btn-export">Exportar…</button>
+          </div>
+        </div>
+        <div id="save-row" class="save-row" hidden>
+          <input id="save-name" type="text" placeholder="Nome do novo perfil" maxlength="60">
+          <button id="save-ok">OK</button>
+          <button id="save-cancel">Cancelar</button>
+        </div>
+        <p id="profile-msg" class="msg"></p>
+        <p class="hint">Duplo clique carrega um perfil. Perfis embutidos não podem ser removidos nem exportados; ★ marca os seus.</p>
+      </fieldset>
+      <fieldset>
+        <legend>Tela</legend>
+        <div class="grid" id="screen-controls"></div>
+      </fieldset>
+    </section>
+
+    <!-- TERMINAL -->
+    <section class="page" id="page-terminal">
+      <fieldset>
+        <legend>Fonte</legend>
+        <div class="grid">
+          <label>Origem</label>
+          <div class="radios">
+            <label><input type="radio" name="fontsource" value="bundled"> Incluídas</label>
+            <label><input type="radio" name="fontsource" value="system"> Do Windows</label>
+          </div>
+          <label for="font-name">Nome</label>
+          <select id="font-name"></select>
+          <label for="raster">Renderização</label>
+          <select id="raster">
+            <option value="0">Padrão (pixels lisos)</option>
+            <option value="1">Linhas de varredura</option>
+            <option value="2">Pixels</option>
+            <option value="3">Sub-pixels (RGB)</option>
+            <option value="4">Moderna (alta resolução)</option>
+          </select>
+        </div>
+        <div class="grid" id="font-controls"></div>
+      </fieldset>
+      <fieldset>
+        <legend>Cores</legend>
+        <div class="grid" id="color-controls"></div>
+        <div class="colors">
+          <label class="color"><input type="color" id="color-font"><span>Fonte</span></label>
+          <label class="color"><input type="color" id="color-bg"><span>Fundo</span></label>
+          <label class="color"><input type="color" id="color-frame"><span>Moldura</span></label>
+        </div>
+      </fieldset>
+    </section>
+
+    <!-- EFEITOS -->
+    <section class="page" id="page-effects">
+      <fieldset>
+        <legend>Efeitos</legend>
+        <div class="grid" id="effect-controls"></div>
+        <p class="hint">Desmarque a caixa para desligar o efeito. "Luz ambiente" só funciona com moldura ou curvatura ativas.</p>
+      </fieldset>
+    </section>
+
+    <!-- AVANÇADO -->
+    <section class="page" id="page-advanced">
+      <fieldset>
+        <legend>Shell</legend>
+        <div class="grid">
+          <label for="shell">Shell padrão</label>
+          <select id="shell"></select>
+        </div>
+        <label class="check"><input type="checkbox" id="use-custom"> Usar comando personalizado no lugar do shell</label>
+        <input type="text" id="custom-cmd" placeholder='ex.: ssh usuario@servidor   ou   "C:\Program Files\Git\bin\bash.exe" --login'>
+        <p class="hint">O comando vale para novas abas. Aspas agrupam argumentos com espaços.</p>
+      </fieldset>
+      <fieldset>
+        <legend>Diversos</legend>
+        <label class="check"><input type="checkbox" id="blink"> Cursor piscante</label>
+        <label class="check"><input type="checkbox" id="menubar"> Mostrar barra de menu</label>
+        <label class="check"><input type="checkbox" id="showsize"> Mostrar tamanho (colunas×linhas) ao redimensionar</label>
+        <div class="grid">
+          <label for="scrollback">Linhas de histórico</label>
+          <input type="number" id="scrollback" min="100" max="100000" step="500">
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Desempenho</legend>
+        <div class="grid" id="perf-controls"></div>
+      </fieldset>
+    </section>
+  </main>
+
+  <script src="settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+:root {
+  --tab-bg: #17130d;
+  --tab-fg: #c8a86a;
+  --tab-active-bg: #2a2214;
+  --tab-active-fg: #ffb648;
+  --tab-border: #3a2f1c;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; height: 100%; overflow: hidden;
+  background: #000; color: #ddd;
+  font-family: 'Share Tech Mono', Consolas, monospace;
+  user-select: none;
+}
+body { display: flex; flex-direction: column; }
+
+#tabbar {
+  display: flex; align-items: stretch; height: 30px; flex: none;
+  background: var(--tab-bg); border-bottom: 1px solid var(--tab-border);
+}
+#tabbar[hidden] { display: none; }
+#tabs { display: flex; flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.tab {
+  display: flex; align-items: center; gap: 6px; min-width: 90px; max-width: 220px; flex: 1 1 0;
+  padding: 0 6px 0 12px; color: var(--tab-fg); cursor: default;
+  border-right: 1px solid var(--tab-border); font-size: 14px; letter-spacing: 0.3px;
+}
+.tab.active { background: var(--tab-active-bg); color: var(--tab-active-fg); text-shadow: 0 0 6px rgba(255, 160, 40, 0.6); }
+.tab .title { flex: 1; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.tab button, #add-tab {
+  background: none; border: 0; color: inherit; font: inherit; cursor: pointer;
+  width: 22px; height: 22px; border-radius: 4px; line-height: 1;
+}
+.tab button:hover, #add-tab:hover { background: rgba(255, 182, 72, 0.15); }
+#add-tab { width: 34px; height: auto; font-size: 18px; color: var(--tab-fg); border-radius: 0; }
+
+#screen-wrap { position: relative; flex: 1; min-height: 0; }
+#screen { position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: text; }
+
+#size-overlay {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  padding: 10px 18px; border-radius: 6px; background: rgba(0, 0, 0, 0.6); color: #fff;
+  font-size: 18px; pointer-events: none;
+}
+#size-overlay[hidden], #error[hidden], #help[hidden] { display: none; }
+
+#error {
+  position: absolute; left: 16px; right: 16px; bottom: 16px; padding: 10px 14px;
+  background: rgba(120, 20, 20, 0.85); color: #fff; border-radius: 6px; font-size: 14px;
+}
+
+#xterm-hosts {
+  position: fixed; left: 0; top: 0; width: 400px; height: 300px;
+  opacity: 0; pointer-events: none; overflow: hidden; z-index: -1;
+}
+#xterm-hosts > div { position: absolute; inset: 0; }
+
+#help {
+  position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+  background: rgba(0, 0, 0, 0.7); z-index: 10;
+}
+.help-box {
+  background: #14110c; border: 1px solid #5a4422; border-radius: 8px; padding: 18px 24px;
+  color: #ffcf85; box-shadow: 0 0 30px rgba(255, 140, 0, 0.25); max-width: 92vw;
+}
+.help-box h2 { margin: 0 0 12px; font-weight: normal; color: #ffb648; }
+.help-box td { padding: 3px 14px 3px 0; font-size: 14px; }
+.help-box td:last-child { color: #fff2d8; }
+.help-box p { margin: 12px 0 0; font-size: 12px; color: #a88a5a; }
